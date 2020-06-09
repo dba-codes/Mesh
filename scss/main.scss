@@ -1,0 +1,54 @@
+/// main file that include als scss files like abstracts, vendors, base, components, pages and themes
+/// @access public
+/// @author dba.codes – Daniel Baumert
+/// @param {*} @import - Import files
+
+// 1. abstracts
+@import 'abstracts/grid-config';
+@import 'abstracts/theme-config';
+/// 1.1. functions
+@import 'abstracts/functions/map-deep';
+@import 'abstracts/functions/position-helper';
+@import 'abstracts/functions/theme-property';
+@import 'abstracts/functions/unitize';
+/// 1.2. mixins
+@import 'abstracts/mixins/background-size';
+@import 'abstracts/mixins/box-sizing';
+@import 'abstracts/mixins/breakpoint-manager';
+@import 'abstracts/mixins/filter';
+@import 'abstracts/mixins/gradient';
+@import 'abstracts/mixins/hyphens';
+@import 'abstracts/mixins/keyframes';
+@import 'abstracts/mixins/opacity';
+@import 'abstracts/mixins/position';
+@import 'abstracts/mixins/prefix';
+@import 'abstracts/mixins/shadow';
+@import 'abstracts/mixins/transform';
+@import 'abstracts/mixins/transition';
+/// 1.3. placeholders
+@import 'abstracts/placeholders/block';
+@import 'abstracts/placeholders/block-flex';
+/// 1.4. classes
+
+// 2. vendors
+
+// 3. base
+@import 'base/normalize';
+
+// 4. layout
+@import 'layout/grid-row';
+@import 'layout/grid-col';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/section';
+@import 'layout/grid-breakpoint-classes'; /* must loaded at the end of the layout section to override the default settings from row and col */
+
+// 5. components
+@import 'components/card';
+@import 'components/headline';
+@import 'components/logo';
+
+// 6. pages
+
+// 7. themes
+@import 'themes/default';

@@ -1,0 +1,22 @@
+/// grid settings for a flexgrid
+$grid: (
+	columns: 12,
+	max-width: 1500px,
+	alignment: (
+		horizontal: flex-start,
+		vertical: flex-start
+	),
+	gutter: (
+		row-horizontal: 2rem,
+		row-vertical: 2rem,
+		column-horizontal: 2rem,
+		column-vertical: 2rem
+	),
+	breakpoints: (
+		xs: (min-width: 0),
+		sm: (min-width: 600px),
+		md: (min-width: 900px),
+		lg: (min-width: 1200px),
+		xl: (min-width: 1500px)
+	)
+);

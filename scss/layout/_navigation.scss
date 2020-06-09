@@ -1,0 +1,18 @@
+.navigation {
+	@extend %block-flex;
+	justify-content: flex-end;
+	
+	li {
+		list-style: none;
+		display: inline;
+		margin-right: 1.5rem;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+		
+		a {
+			padding: 0.25rem;
+		}
+	}
+}

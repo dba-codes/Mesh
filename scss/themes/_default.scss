@@ -1,0 +1,71 @@
+/// "default" theme configuration
+/// @access private
+/// @author dba.codes – Daniel Baumert
+/// @param {Object} $themes - Object that contains all defined themes
+
+$theme: default;
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap');
+
+body {
+	background: theme-property($theme, colors, light);
+	font-size: theme-property($theme, typography, base-size);
+	font-family: theme-property($theme, typography, base-family), sans-serif;
+	color: theme-property($theme, colors, font-base);
+	font-weight: 300;
+}
+
+header {
+	background: transparent;
+}
+
+.logo {
+	color: theme-property($theme, colors, primary);
+	
+	.slogan {
+		color: theme-property($theme, colors, secondary);
+	}
+}
+
+ul.navigation {
+	li {
+		&.current {
+			a {
+				color: theme-property($theme, colors, primary);
+			}
+		}
+		a {
+			&:hover {
+				color: theme-property($theme, colors, accent);
+			}
+		}
+	}
+}
+
+.headline {
+	color: theme-property($theme, colors, font-headline);
+	font-family: theme-property($theme, typography, headline-family), sans-serif;
+}
+
+.text {
+	color: theme-property($theme, colors, font-base);
+}
+
+.card {
+	background: theme-property($theme, colors, light);
+	border-radius: theme-property($theme, radius, small);
+	@include shadow(box, theme-property($theme, shadow, small));
+	
+	&__headline {
+		&:after {
+			background: theme-property($theme, colors, secondary);
+		}
+	}
+}
+.section {
+	&__headline {
+		.label {
+			background: theme-property($theme, colors, primary);
+		}
+	}
+}

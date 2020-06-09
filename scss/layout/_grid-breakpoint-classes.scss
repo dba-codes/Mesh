@@ -1,0 +1,123 @@
+/// generate columns for each breakpoint
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints: map of all available breakpoints
+/// @requires $grid: columns
+
+$breakpoints: map-deep-get($grid, "breakpoints");
+
+@each $breakpoint, $map in $breakpoints {
+	@include for-size($breakpoint) {
+		@for $i from 1 through map-get($grid, columns) {
+			//columns
+			.#{$breakpoint}--#{$i} {
+				flex-basis: unquote(100 / map-get($grid, columns) * $i+'%');
+			}
+		}
+		
+		// dynamic column width
+		.#{$breakpoint}--auto {
+			flex: 0 0 auto;
+		}
+		// hide and show
+		.#{$breakpoint}--hide {
+			visibility: hidden;
+		}
+		.#{$breakpoint}--show {
+			visibility: visible;
+		}
+		// order
+		.#{$breakpoint}--first {
+			order: -1;
+		}
+		.#{$breakpoint}--last {
+			order: 99999999;
+		}
+		// justify
+		.#{$breakpoint}--left {
+			justify-content: flex-start;
+		}
+		.#{$breakpoint}--center {
+			justify-content: center;
+		}
+		.#{$breakpoint}--right {
+			justify-content: flex-end;
+		}
+		.#{$breakpoint}--around {
+			justify-content: space-around;
+		}
+		.#{$breakpoint}--between {
+			justify-content: space-between;
+		}
+		// align
+		.#{$breakpoint}--top {
+			align-items: flex-start;
+		}
+		.#{$breakpoint}--middle {
+			align-items: center;
+		}
+		.#{$breakpoint}--bottom {
+			align-items: flex-end;
+		}
+		.#{$breakpoint}--stretch {
+			align-items: stretch;
+		}
+		// justify childs
+		.#{$breakpoint}--left--child > * {
+			justify-content: flex-start;
+		}
+		.#{$breakpoint}--center--child > * {
+			justify-content: center;
+		}
+		.#{$breakpoint}--right--child > * {
+			justify-content: flex-end;
+		}
+		.#{$breakpoint}--around--child > * {
+			justify-content: space-around;
+		}
+		.#{$breakpoint}--between--child > * {
+			justify-content: space-between;
+		}
+		// align childs
+		.#{$breakpoint}--top--child > * {
+			align-items: flex-start;
+		}
+		.#{$breakpoint}--middle--child > * {
+			align-items: center;
+		}
+		.#{$breakpoint}--bottom--child > * {
+			align-items: flex-end;
+		}
+		.#{$breakpoint}--stretch--child > * {
+			align-items: stretch;
+		}
+		//direction
+		.#{$breakpoint}--row-ltr {
+			flex-direction: row;
+		}
+		.#{$breakpoint}--row-rtl {
+			flex-direction: row-reverse;
+		}
+		.#{$breakpoint}--col-ltr {
+			flex-direction: column;
+		}
+		.#{$breakpoint}--col-rtl {
+			flex-direction: column-reverse;
+		}
+		//wrap
+		.#{$breakpoint}--wrap {
+			flex-wrap: wrap;
+		}
+		.#{$breakpoint}--wrap--disable {
+			flex-wrap: nowrap;
+		}
+		//max-width
+		.#{$breakpoint}--max-width {
+			max-width: map-deep-get($grid, max-width);
+		}
+		.#{$breakpoint}--max-width--disable {
+			max-width: none;
+		}
+	}
+}
+

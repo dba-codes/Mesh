@@ -1,0 +1,99 @@
+.headline {
+	@extend %block;
+	
+	h1, h2, h3, h4, h5, h6 {
+		@extend %block;
+	}
+
+	h1 {
+		font-size: 2.05rem;
+		
+		@include for-size(sm) {
+			font-size: 2.3rem;
+		}
+		
+		@include for-size(md) {
+			font-size: 2.55rem;
+		}
+		
+		@include for-size(lg) {
+			font-size: 2.8rem;
+		}
+		
+		&.big {
+			font-size: 3.75rem;
+			
+			@include for-size(sm) {
+				font-size: 4rem;
+			}
+			
+			@include for-size(md) {
+				font-size: 4.25rem;
+			}
+			
+			@include for-size(lg) {
+				font-size: 4.5rem;
+			}
+		}
+	}
+	h2 {
+		font-size: 1.45rem;
+		
+		@include for-size(sm) {
+			font-size: 1.7rem;
+		}
+		
+		@include for-size(md) {
+			font-size: 1.95rem;
+		}
+		
+		@include for-size(lg) {
+			font-size: 2.2rem;
+		}
+	}
+	h3 {
+		font-size: 1.25rem;
+		
+		@include for-size(sm) {
+			font-size: 1.35rem;
+		}
+		
+		@include for-size(md) {
+			font-size: 1.45rem;
+		}
+		
+		@include for-size(lg) {
+			font-size: 1.55rem;
+		}
+	}
+	h4 {
+		font-size: 1.1rem;
+		
+		@include for-size(sm) {
+			font-size: 1.15rem;
+		}
+		
+		@include for-size(md) {
+			font-size: 1.2rem;
+		}
+		
+		@include for-size(lg) {
+			font-size: 1.25rem;
+		}
+	}
+	h5, h6 {
+		font-size: 1rem;
+		
+		@include for-size(sm) {
+			font-size: 1.025rem;
+		}
+		
+		@include for-size(md) {
+			font-size: 1.05rem;
+		}
+		
+		@include for-size(lg) {
+			font-size: 1.1rem;
+		}
+	}
+}

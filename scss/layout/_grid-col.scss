@@ -1,0 +1,5 @@
+.col {
+	height: auto;
+	margin: 0;
+	padding: map-deep-get($grid, gutter, column-horizontal)/2 map-deep-get($grid, gutter, column-vertical)/2;
+}

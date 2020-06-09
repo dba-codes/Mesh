@@ -1,0 +1,17 @@
+$radiusgroup: map-deep-get($themes, default, radius);
+
+@each $radius, $map in $radiusgroup {
+	.radius--#{$radius} {
+		@include radius($map);
+	}
+}
+$shadowgroup: map-deep-get($themes, default, shadow);
+
+@each $shadow, $map in $shadowgroup {
+	.shadow-text--#{$shadow} {
+		@include shadow(text, $map);
+	}
+	.shadow-box--#{$shadow} {
+		@include shadow(box, $map);
+	}
+}

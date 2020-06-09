@@ -4,7 +4,7 @@
 /// @requires $breakpoints: map of all available breakpoints
 /// @requires $grid: columns
 
-$breakpoints: map-deep-get($grid, "breakpoints");
+$breakpoints: map-deep-get($grid, breakpoints);
 
 @each $breakpoint, $map in $breakpoints {
 	@include for-size($breakpoint) {

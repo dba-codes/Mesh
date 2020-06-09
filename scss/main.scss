@@ -8,7 +8,7 @@
 @import 'abstracts/theme-config';
 /// 1.1. functions
 @import 'abstracts/functions/map-deep';
-@import 'abstracts/functions/position-helper';
+@import 'abstracts/functions/position-helper'; 
 @import 'abstracts/functions/theme-property';
 @import 'abstracts/functions/unitize';
 /// 1.2. mixins
@@ -22,6 +22,7 @@
 @import 'abstracts/mixins/opacity';
 @import 'abstracts/mixins/position';
 @import 'abstracts/mixins/prefix';
+@import 'abstracts/mixins/radius';
 @import 'abstracts/mixins/shadow';
 @import 'abstracts/mixins/transform';
 @import 'abstracts/mixins/transition';
@@ -34,6 +35,8 @@
 
 // 3. base
 @import 'base/normalize';
+@import 'base/global-styles';
+@import 'base/grid-breakpoint-classes';
 
 // 4. layout
 @import 'layout/grid-row';
@@ -41,7 +44,6 @@
 @import 'layout/header';
 @import 'layout/navigation';
 @import 'layout/section';
-@import 'layout/grid-breakpoint-classes'; /* must loaded at the end of the layout section to override the default settings from row and col */
 
 // 5. components
 @import 'components/card';

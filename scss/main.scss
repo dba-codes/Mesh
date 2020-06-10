@@ -8,7 +8,7 @@
 @import 'abstracts/theme-config';
 /// 1.1. functions
 @import 'abstracts/functions/map-deep';
-@import 'abstracts/functions/position-helper'; 
+@import 'abstracts/functions/position-helper';
 @import 'abstracts/functions/theme-property';
 @import 'abstracts/functions/unitize';
 /// 1.2. mixins
@@ -35,7 +35,6 @@
 
 // 3. base
 @import 'base/normalize';
-@import 'base/global-styles';
 @import 'base/grid-breakpoint-classes';
 
 // 4. layout
@@ -53,4 +52,5 @@
 // 6. pages
 
 // 7. themes
+@import 'themes/global';
 @import 'themes/default';

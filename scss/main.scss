@@ -4,14 +4,15 @@
 /// @param {*} @import - Import files
 
 // 1. abstracts
-@import 'abstracts/grid-config';
-@import 'abstracts/theme-config';
+@import 'abstracts/variables/grid-config';
+@import 'abstracts/variables/theme-config';
 /// 1.1. functions
 @import 'abstracts/functions/map-deep';
 @import 'abstracts/functions/position-helper';
 @import 'abstracts/functions/theme-property';
 @import 'abstracts/functions/unitize';
 /// 1.2. mixins
+@import 'abstracts/mixins/background-image';
 @import 'abstracts/mixins/background-size';
 @import 'abstracts/mixins/box-sizing';
 @import 'abstracts/mixins/breakpoint-manager';
@@ -35,11 +36,9 @@
 
 // 3. base
 @import 'base/normalize';
-@import 'base/grid-breakpoint-classes';
 
 // 4. layout
-@import 'layout/grid-row';
-@import 'layout/grid-col';
+@import 'layout/grid';
 @import 'layout/header';
 @import 'layout/navigation';
 @import 'layout/section';

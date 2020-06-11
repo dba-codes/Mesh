@@ -1,9 +1,61 @@
 .section {
 	@extend %block;
 	@include gradient(linear, -45deg, theme-property(default, colors, light), theme-property(default, colors, accent));
-	padding: theme-property(default, spacing, medium) 0;
 	
-	&__headline {
+	// if section has an section__image
+	&.has--bg-image {
+		position: relative;
+		
+		> * {
+			position: relative;
+			z-index: 1;
+		}
+	}
+	
+	// if the section should be cover the whole window
+	&.is--full-height {
+		min-height: 100vh;
+		display: flex;
+	}
+	
+	// section image is displayed a an background image
+	figure[class*='section__image'] {
+		@include background-image('', no-repeat, cover, center center);
+		z-index: 0;
+		
+		// if positioning the image if figure has an image inside
+		img {
+			@include absolute(top left);
+			object-fit: cover;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	
+	// image-positioning
+	figure.section__image {
+		&--full {
+			@include absolute(top left);
+			height: 100%;
+			width: 100%;
+		}
+		
+		&--left {
+			@include absolute(top left);
+			height: 100%;
+			width: 50vw;
+		}
+		
+		&--right {
+			@include absolute(top right bottom);
+			height: 100%;
+			width: 50vw;
+		}
+	}
+	
+	// section headline with label
+	.section__headline {
 		h2 {
 			font-weight: 300;
 			.label {

@@ -36,7 +36,7 @@ ul.navigation {
 		}
 		a {
 			&:hover {
-				color: theme-property($theme, colors, accent);
+				color: theme-property($theme, colors, secondary);
 			}
 		}
 	}

@@ -355,6 +355,26 @@ template {
   display: none;
 }
 
+.row {
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
+  margin: 0 auto;
+  padding: 1rem 1rem;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.col {
+  height: auto;
+  margin: 0;
+  padding: 1rem 1rem;
+}
+
 @media (min-width: 0) {
   .xs--1 {
     flex-basis: 8.3333333333%;
@@ -1220,26 +1240,6 @@ template {
     max-width: none;
   }
 }
-.row {
-  width: 100%;
-  max-width: 1500px;
-  height: auto;
-  margin: 0 auto;
-  padding: 1rem 1rem;
-  display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.col {
-  height: auto;
-  margin: 0;
-  padding: 1rem 1rem;
-}
-
 .navigation {
   justify-content: flex-end;
 }
@@ -1260,12 +1260,63 @@ template {
   background: -webkit-linear-gradient(-45deg, #F7F6F0, #EFE8D9);
   background: -moz-linear-gradient(-45deg, #F7F6F0, #EFE8D9);
   background: -o-linear-gradient(-45deg, #F7F6F0, #EFE8D9);
-  padding: 1rem 0;
 }
-.section__headline h2 {
+.section.has--bg-image {
+  position: relative;
+}
+.section.has--bg-image > * {
+  position: relative;
+  z-index: 1;
+}
+.section.is--full-height {
+  min-height: 100vh;
+  display: flex;
+}
+.section figure[class*=section__image] {
+  background: url();
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center center;
+  z-index: 0;
+}
+.section figure[class*=section__image] img {
+  position: absolute;
+  top: left;
+  left: 0;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.section figure.section__image--full {
+  position: absolute;
+  top: left;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.section figure.section__image--left {
+  position: absolute;
+  top: left;
+  left: 0;
+  height: 100%;
+  width: 50vw;
+}
+.section figure.section__image--right {
+  position: absolute;
+  top: right;
+  right: bottom;
+  bottom: 0;
+  height: 100%;
+  width: 50vw;
+}
+.section .section__headline h2 {
   font-weight: 300;
 }
-.section__headline h2 .label {
+.section .section__headline h2 .label {
   position: relative;
   top: -6px;
   width: 30px;
@@ -1516,7 +1567,7 @@ ul.navigation li.current a {
   color: #444D74;
 }
 ul.navigation li a:hover {
-  color: #EFE8D9;
+  color: #F0C14A;
 }
 
 .headline {

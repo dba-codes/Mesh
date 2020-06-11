@@ -1,3 +1,25 @@
+/// row class with default configuration
+.row {
+	width: 100%;
+	max-width: map-deep-get($grid, max-width);
+	height: auto;
+	margin: 0 auto;
+	padding: map-deep-get($grid, gutter, row-horizontal)/2 map-deep-get($grid, gutter, row-vertical)/2;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	flex-flow: row wrap;
+	justify-content: map-deep-get($grid, alignment, horizontal);
+	align-items: map-deep-get($grid, alignment, vertical);
+}
+
+/// column class with default configuration
+.col {
+	height: auto;
+	margin: 0;
+	padding: map-deep-get($grid, gutter, column-horizontal)/2 map-deep-get($grid, gutter, column-vertical)/2;
+}
+
 /// generate columns for each breakpoint
 /// @access public
 /// @param {String} $breakpoint - Breakpoint

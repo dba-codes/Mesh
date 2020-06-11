@@ -1,0 +1,13 @@
+@mixin background-image($background, $repeat, $size, $position) {
+	@if type_of($background) == 'color' {
+		background: $background;
+	} @else if type_of($background) == 'string' {
+		background: url(#{$background});
+	}
+	background-repeat: $repeat;
+	background-size: $size;
+	-moz-background-size: $size;
+	-webkit-background-size: $size;
+	-o-background-size: $size;
+	background-position: $position;
+}

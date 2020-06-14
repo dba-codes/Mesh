@@ -5,12 +5,17 @@
 
 /**
  * 1. Theme name
- * 2. Show the overflow in Edge and IE.
+ * 2. Color properties
+ * 3. Typography properties
+ * 4. Radius properties
+ * 5. Spacing properties
+ * 6. Shadow properties
+ * 7. You can add more themes here
  */
 
 $themes: (
 	default: ( /* 1 */
-		/// colors
+		/* 2 */
 		colors: (
 			primary: #444D74,
 			secondary: #F0C14A,
@@ -20,42 +25,30 @@ $themes: (
 			font-base: #343434,
 			font-headline: #444D74
 		),
-		/// typography
+		/* 3 */
 		typography: (
 			base-size: 12,
 			base-family: 'Jost',
 			headline-family: 'Jost'
 		),
-		/// radius
+		/* 4 */
 		radius: (
 			small: 0.5rem,
 			medium: 1rem,
 			large: 2rem
 		),
-		/// spacing
+		/* 5 */
 		spacing: (
 			small: 0.5rem,
 			medium: 1rem,
 			large: 2rem
 		),
-		/// spacing
+		/* 6 */
 		shadow: (
 			small: 0 2px 6px rgba(0,0,0,0.075),
 			medium: 0 9px 16px rgba(0,0,0,0.15),
 			large: 0 12px 24px rgba(0,0,0,0.25)
 		)
-	),
-	olive: ( /* 1 */
-		/// colors
-		colors: (
-			primary: #78856E,
-			secondary: #ABC39D,
-			accent: #EDCD6D,
-			light: #FFF,
-			dark: #242328,
-			font-base: #FFF,
-			font-headline: #FFF
-		)
 	)
-	/// second or more themes here
+	/* 7 */
 );

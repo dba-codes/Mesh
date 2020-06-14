@@ -15,12 +15,12 @@
 	// if the section should be cover the whole window
 	&.is--full-height {
 		min-height: 100vh;
-		display: flex;
+		display: flex; 
 	}
 	
 	// section image is displayed a an background image
 	figure[class*='section__image'] {
-		@include background-image('', no-repeat, cover, center center);
+		@include background-property(no-repeat, cover, center center);
 		z-index: 0;
 		
 		// if positioning the image if figure has an image inside

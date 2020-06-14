@@ -1,6 +1,11 @@
 /**
  * 1. Theme name
- * 2. Show the overflow in Edge and IE.
+ * 2. Color properties
+ * 3. Typography properties
+ * 4. Radius properties
+ * 5. Spacing properties
+ * 6. Shadow properties
+ * 7. You can add more themes here
  */
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap");
 .headline h1, .headline h2, .headline h3, .headline h4, .headline h5, .headline h6, .headline, .card, .section, header {
@@ -1273,7 +1278,6 @@ template {
   display: flex;
 }
 .section figure[class*=section__image] {
-  background: url();
   background-repeat: no-repeat;
   background-size: cover;
   -moz-background-size: cover;

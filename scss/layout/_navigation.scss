@@ -11,8 +11,17 @@
 			margin-right: 0;
 		}
 		
+		&.current {
+			a {
+				color: $color--primary;
+			}
+		}
+		
 		a {
 			padding: 0.25rem;
+			&:hover {
+				color: $color--secondary;
+			}
 		}
 	}
 }

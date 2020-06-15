@@ -1,0 +1,9 @@
+.text {
+	@extend %block;
+	color: $color--font-base;
+	font-weight: 300;
+	
+	p {
+		@extend %block;
+	}
+}

@@ -2,6 +2,7 @@
 	display: block;
 	font-size: 1.6rem;
 	font-weight: 900;
+	color: $color--primary;
 	
 	.slogan {
 		display: block;
@@ -9,5 +10,6 @@
 		font-weight: 300;
 		margin-top: 0.3rem;
 		text-transform: uppercase;
+		color: $color--secondary;
 	}
 }

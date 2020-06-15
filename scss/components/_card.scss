@@ -1,8 +1,11 @@
 .card {
 	@extend %block;
-	padding: theme-property(default, spacing, large);
+	background: $color--light;
+	padding: $spacing--large;
+	border-radius: $radius--small;
+	@include shadow(box, $shadow--small);
 	
-	&__headline {
+	.card__headline {
 		position: relative;
 		margin-bottom: theme-property(default, spacing, medium);
 		padding-bottom: theme-property(default, spacing, medium);
@@ -13,6 +16,7 @@
 			@include transform(translateX(-50%));
 			height: 2px;
 			width: 25px;
+			background: $color--secondary;
 		}
 		
 		h3, h4 {

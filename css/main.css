@@ -1,14 +1,5 @@
-/**
- * 1. Theme name
- * 2. Color properties
- * 3. Typography properties
- * 4. Radius properties
- * 5. Spacing properties
- * 6. Shadow properties
- * 7. You can add more themes here
- */
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap");
-.headline h1, .headline h2, .headline h3, .headline h4, .headline h5, .headline h6, .headline, .card, .section, header {
+.text p, .text, .headline h1, .headline h2, .headline h3, .headline h4, .headline h5, .headline h6, .headline, .card, .section, header {
   width: 100%;
   display: block;
 }
@@ -20,6 +11,29 @@
   display: -moz-flex;
 }
 
+/**
+ * 1. Theme name
+ * 2. Color properties
+ * 3. Typography properties
+ * 4. Radius properties
+ * 5. Spacing properties
+ * 6. Shadow properties
+ * 7. You can add more themes here
+ */
+/**
+ * 1. Theme name
+ * 2. Color variables
+ * 3. Typography variables
+ * 4. Radius variables
+ * 5. Spacing variables
+ * 6. Shadow variables
+ */
+/* 1 */
+/* 2 */
+/* 3 */
+/* 4 */
+/* 5 */
+/* 6 */
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -358,6 +372,77 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+body {
+  background: #F7F6F0;
+  font-size: 12;
+  font-family: "Jost";
+  color: #343434;
+  font-weight: 300;
+}
+
+.radius--small {
+  border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.radius--medium {
+  border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.radius--large {
+  border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+.shadow-text--small {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
+  -moz-text-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
+  -webkit-text-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
+  -o-text-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
+}
+
+.shadow-box--small {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
+  -o-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
+}
+
+.shadow-text--medium {
+  text-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
+  -moz-text-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
+  -webkit-text-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
+  -o-text-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-box--medium {
+  box-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-text--large {
+  text-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  -moz-text-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  -webkit-text-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  -o-text-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-box--large {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  -o-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
 .row {
@@ -1256,8 +1341,14 @@ template {
 .navigation li:last-child {
   margin-right: 0;
 }
+.navigation li.current a {
+  color: #444D74;
+}
 .navigation li a {
   padding: 0.25rem;
+}
+.navigation li a:hover {
+  color: #F0C14A;
 }
 
 .section {
@@ -1325,6 +1416,7 @@ template {
   top: -6px;
   width: 30px;
   height: 30px;
+  background: #444D74;
   display: inline-block;
   text-align: center;
   color: #fff;
@@ -1333,15 +1425,36 @@ template {
   margin-right: 1rem;
 }
 
-.card {
-  padding: 2rem;
+.logo {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #444D74;
 }
-.card__headline {
+.logo .slogan {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 300;
+  margin-top: 0.3rem;
+  text-transform: uppercase;
+  color: #F0C14A;
+}
+
+.card {
+  background: #F7F6F0;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
+  -o-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
+}
+.card .card__headline {
   position: relative;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
 }
-.card__headline:after {
+.card .card__headline:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1352,17 +1465,22 @@ template {
   -o-transform: translateX(-50%);
   height: 2px;
   width: 25px;
+  background: #F0C14A;
 }
-.card__headline h3, .card__headline h4 {
+.card .card__headline h3, .card .card__headline h4 {
   text-align: center;
   text-transform: uppercase;
 }
-.card__headline h4 {
+.card .card__headline h4 {
   margin-top: 0.5rem;
   font-weight: 300;
   font-size: 0.75rem !important;
 }
 
+.headline {
+  color: #444D74;
+  font-family: "Jost";
+}
 .headline h1 {
   font-size: 2.05rem;
 }
@@ -1472,131 +1590,9 @@ template {
   }
 }
 
-.logo {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 900;
-}
-.logo .slogan {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 300;
-  margin-top: 0.3rem;
-  text-transform: uppercase;
-}
-
-.radius--small {
-  border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
-}
-
-.radius--medium {
-  border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -o-border-radius: 1rem;
-}
-
-.radius--large {
-  border-radius: 2rem;
-  -moz-border-radius: 2rem;
-  -webkit-border-radius: 2rem;
-  -o-border-radius: 2rem;
-}
-
-.shadow-text--small {
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
-  -moz-text-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
-  -webkit-text-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
-  -o-text-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
-}
-
-.shadow-box--small {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
-  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
-  -o-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
-}
-
-.shadow-text--medium {
-  text-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
-  -moz-text-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
-  -webkit-text-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
-  -o-text-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
-}
-
-.shadow-box--medium {
-  box-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
-  -o-box-shadow: 0 9px 16px rgba(0, 0, 0, 0.15);
-}
-
-.shadow-text--large {
-  text-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  -moz-text-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  -webkit-text-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  -o-text-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-}
-
-.shadow-box--large {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  -o-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-}
-
-body {
-  background: #F7F6F0;
-  font-size: 12;
-  font-family: "Jost", sans-serif;
-  color: #343434;
-  font-weight: 300;
-}
-
-header {
-  background: transparent;
-}
-
-.logo {
-  color: #444D74;
-}
-.logo .slogan {
-  color: #F0C14A;
-}
-
-ul.navigation li.current a {
-  color: #444D74;
-}
-ul.navigation li a:hover {
-  color: #F0C14A;
-}
-
-.headline {
-  color: #444D74;
-  font-family: "Jost", sans-serif;
-}
-
 .text {
   color: #343434;
-}
-
-.card {
-  background: #F7F6F0;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
-  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
-  -o-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.075);
-}
-.card__headline:after {
-  background: #F0C14A;
-}
-
-.section__headline .label {
-  background: #444D74;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -15,7 +15,7 @@
 	// if the section should be cover the whole window
 	&.is--full-height {
 		min-height: 100vh;
-		display: flex; 
+		display: flex;
 	}
 	
 	// section image is displayed a an background image
@@ -62,6 +62,7 @@
 				@include relative(top -6px);
 				width: 30px;
 				height: 30px;
+				background: $color--primary;
 				display: inline-block;
 				text-align: center;
 				color: #fff;

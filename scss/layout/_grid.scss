@@ -5,9 +5,7 @@
 	height: auto;
 	margin: 0 auto;
 	padding: map-deep-get($grid, gutter, row-horizontal)/2 map-deep-get($grid, gutter, row-vertical)/2;
-	display: flex;
-	display: -webkit-flex;
-	display: -moz-flex;
+	@extend %block-flex;
 	flex-flow: row wrap;
 	justify-content: map-deep-get($grid, alignment, horizontal);
 	align-items: map-deep-get($grid, alignment, vertical);
@@ -15,12 +13,133 @@
 
 /// column class with default configuration
 .col {
+	width: auto;
 	height: auto;
 	margin: 0;
 	padding: map-deep-get($grid, gutter, column-horizontal)/2 map-deep-get($grid, gutter, column-vertical)/2;
 }
 
-/// generate columns for each breakpoint
+/// extending classes for row and grid elements
+// things depends on the number of columns 
+@for $i from 1 through map-get($grid, columns) {
+	//column width
+	.col-#{$i} {
+		width: unquote(100 / map-get($grid, columns) * $i+'%');
+	}
+	// left shifting
+	.shift-left-#{$i} {
+		margin-left: unquote(100 / map-get($grid, columns) * $i+'%');
+	}
+	// right shifting
+	.shift-right-#{$i} {
+		margin-right: unquote(100 / map-get($grid, columns) * $i+'%');
+	}
+}
+// dynamic column width
+.col-auto {
+	flex: 0 0 auto;
+}
+// hide and show
+.hide {
+	visibility: hidden;
+}
+.show {
+	visibility: visible;
+}
+// order
+.first {
+	order: -1;
+}
+.last {
+	order: 99999999;
+}
+// justify
+.left {
+	justify-content: flex-start;
+}
+.center {
+	justify-content: center;
+}
+.right {
+	justify-content: flex-end;
+}
+.around {
+	justify-content: space-around;
+}
+.between {
+	justify-content: space-between;
+}
+// align
+.top {
+	align-items: flex-start;
+}
+.middle {
+	align-items: center;
+}
+.bottom {
+	align-items: flex-end;
+}
+.stretch {
+	align-items: stretch;
+}
+// justify childs
+.left--child > * {
+	justify-content: flex-start;
+}
+.center--child > * {
+	justify-content: center;
+}
+.right--child > * {
+	justify-content: flex-end;
+}
+.around--child > * {
+	justify-content: space-around;
+}
+.between--child > * {
+	justify-content: space-between;
+}
+// align childs
+.top--child > * {
+	align-items: flex-start;
+}
+.middle--child > * {
+	align-items: center;
+}
+.bottom--child > * {
+	align-items: flex-end;
+}
+.stretch--child > * {
+	align-items: stretch;
+}
+//direction
+.row-ltr {
+	flex-direction: row;
+}
+.row-rtl {
+	flex-direction: row-reverse;
+}
+.col-ltr {
+	flex-direction: column;
+}
+.col-rtl {
+	flex-direction: column-reverse;
+}
+//wrap
+.wrap {
+	flex-wrap: wrap;
+}
+.wrap--disable {
+	flex-wrap: nowrap;
+}
+//max-width
+.max-width {
+	max-width: map-deep-get($grid, max-width);
+}
+.max-width--disable {
+	max-width: none;
+}
+
+/// generate the extending classes for each breakpoint
 /// @access public
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints: map of all available breakpoints
@@ -30,114 +149,123 @@ $breakpoints: map-deep-get($grid, breakpoints);
 
 @each $breakpoint, $map in $breakpoints {
 	@include for-size($breakpoint) {
+		// things depends on the number of columns
 		@for $i from 1 through map-get($grid, columns) {
-			//columns
-			.#{$breakpoint}--#{$i} {
-				flex-basis: unquote(100 / map-get($grid, columns) * $i+'%');
+			//column width
+			.#{$breakpoint}\:col-#{$i} {
+				width: unquote(100 / map-get($grid, columns) * $i+'%');
+			}
+			// left shifting
+			.#{$breakpoint}\:shift-left-#{$i} {
+				margin-left: unquote(100 / map-get($grid, columns) * $i+'%');
+			}
+			// right shifting
+			.#{$breakpoint}\:shift-right-#{$i} {
+				margin-right: unquote(100 / map-get($grid, columns) * $i+'%');
 			}
 		}
 		
 		// dynamic column width
-		.#{$breakpoint}--auto {
+		.#{$breakpoint}\:col-auto {
 			flex: 0 0 auto;
 		}
 		// hide and show
-		.#{$breakpoint}--hide {
+		.#{$breakpoint}\:hide {
 			visibility: hidden;
 		}
-		.#{$breakpoint}--show {
+		.#{$breakpoint}\:show {
 			visibility: visible;
 		}
 		// order
-		.#{$breakpoint}--first {
+		.#{$breakpoint}\:first {
 			order: -1;
 		}
-		.#{$breakpoint}--last {
+		.#{$breakpoint}\:last {
 			order: 99999999;
 		}
 		// justify
-		.#{$breakpoint}--left {
+		.#{$breakpoint}\:left {
 			justify-content: flex-start;
 		}
-		.#{$breakpoint}--center {
+		.#{$breakpoint}\:center {
 			justify-content: center;
 		}
-		.#{$breakpoint}--right {
+		.#{$breakpoint}\:right {
 			justify-content: flex-end;
 		}
-		.#{$breakpoint}--around {
+		.#{$breakpoint}\:around {
 			justify-content: space-around;
 		}
-		.#{$breakpoint}--between {
+		.#{$breakpoint}\:between {
 			justify-content: space-between;
 		}
 		// align
-		.#{$breakpoint}--top {
+		.#{$breakpoint}\:top {
 			align-items: flex-start;
 		}
-		.#{$breakpoint}--middle {
+		.#{$breakpoint}\:middle {
 			align-items: center;
 		}
-		.#{$breakpoint}--bottom {
+		.#{$breakpoint}\:bottom {
 			align-items: flex-end;
 		}
-		.#{$breakpoint}--stretch {
+		.#{$breakpoint}\:stretch {
 			align-items: stretch;
 		}
 		// justify childs
-		.#{$breakpoint}--left--child > * {
+		.#{$breakpoint}\:left--child > * {
 			justify-content: flex-start;
 		}
-		.#{$breakpoint}--center--child > * {
+		.#{$breakpoint}\:center--child > * {
 			justify-content: center;
 		}
-		.#{$breakpoint}--right--child > * {
+		.#{$breakpoint}\:right--child > * {
 			justify-content: flex-end;
 		}
-		.#{$breakpoint}--around--child > * {
+		.#{$breakpoint}\:around--child > * {
 			justify-content: space-around;
 		}
-		.#{$breakpoint}--between--child > * {
+		.#{$breakpoint}\:between--child > * {
 			justify-content: space-between;
 		}
 		// align childs
-		.#{$breakpoint}--top--child > * {
+		.#{$breakpoint}\:top--child > * {
 			align-items: flex-start;
 		}
-		.#{$breakpoint}--middle--child > * {
+		.#{$breakpoint}\:middle--child > * {
 			align-items: center;
 		}
-		.#{$breakpoint}--bottom--child > * {
+		.#{$breakpoint}\:bottom--child > * {
 			align-items: flex-end;
 		}
-		.#{$breakpoint}--stretch--child > * {
+		.#{$breakpoint}\:stretch--child > * {
 			align-items: stretch;
 		}
 		//direction
-		.#{$breakpoint}--row-ltr {
+		.#{$breakpoint}\:row-ltr {
 			flex-direction: row;
 		}
-		.#{$breakpoint}--row-rtl {
+		.#{$breakpoint}\:row-rtl {
 			flex-direction: row-reverse;
-		}
-		.#{$breakpoint}--col-ltr {
+		}                                             
+		.#{$breakpoint}\:col-ltr {
 			flex-direction: column;
-		}
-		.#{$breakpoint}--col-rtl {
+		}                                                               
+		.#{$breakpoint}\:col-rtl {
 			flex-direction: column-reverse;
 		}
 		//wrap
-		.#{$breakpoint}--wrap {
+		.#{$breakpoint}\:wrap {
 			flex-wrap: wrap;
 		}
-		.#{$breakpoint}--wrap--disable {
+		.#{$breakpoint}\:wrap--disable {
 			flex-wrap: nowrap;
 		}
 		//max-width
-		.#{$breakpoint}--max-width {
+		.#{$breakpoint}\:max-width {
 			max-width: map-deep-get($grid, max-width);
 		}
-		.#{$breakpoint}--max-width--disable {
+		.#{$breakpoint}\:max-width--disable {
 			max-width: none;
 		}
 	}

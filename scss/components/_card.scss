@@ -7,8 +7,8 @@
 	
 	.card__headline {
 		position: relative;
-		margin-bottom: theme-property(default, spacing, medium);
-		padding-bottom: theme-property(default, spacing, medium);
+		margin-bottom: $spacing--medium;
+		padding-bottom: $spacing--medium;
 		
 		&:after {
 			content: '';
@@ -24,7 +24,7 @@
 			text-transform: uppercase;
 		}
 		h4 {
-			margin-top: theme-property(default, spacing, small);
+			margin-top: $spacing--small;
 			font-weight: 300;
 			font-size: 0.75rem !important;
 		}

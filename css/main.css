@@ -2071,6 +2071,8 @@ body {
 .text {
   color: #343434;
   font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.45;
 }
 
 /*# sourceMappingURL=main.css.map */

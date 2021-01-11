@@ -609,6 +609,7 @@ body {
 
 .col-auto {
   flex: 0 0 auto;
+  width: auto;
 }
 
 .hide {
@@ -878,6 +879,7 @@ body {
 
   .sm\:col-auto {
     flex: 0 0 auto;
+    width: auto;
   }
 
   .sm\:hide {
@@ -1147,6 +1149,7 @@ body {
 
   .md\:col-auto {
     flex: 0 0 auto;
+    width: auto;
   }
 
   .md\:hide {
@@ -1416,6 +1419,7 @@ body {
 
   .lg\:col-auto {
     flex: 0 0 auto;
+    width: auto;
   }
 
   .lg\:hide {
@@ -1685,6 +1689,7 @@ body {
 
   .xl\:col-auto {
     flex: 0 0 auto;
+    width: auto;
   }
 
   .xl\:hide {

@@ -38,6 +38,7 @@
 // dynamic column width
 .col-auto {
 	flex: 0 0 auto;
+	width: auto;
 }
 // hide and show
 .hide {
@@ -168,6 +169,7 @@ $breakpoints: map-deep-get($grid, breakpoints);
 		// dynamic column width
 		.#{$breakpoint}\:col-auto {
 			flex: 0 0 auto;
+			width: auto;
 		}
 		// hide and show
 		.#{$breakpoint}\:hide {

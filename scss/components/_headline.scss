@@ -1,6 +1,5 @@
 .headline {
 	@extend %block;
-	color: $color--font-headline;
 	font-family: $font--headline-family;
 	
 	h1, h2, h3, h4, h5, h6 {

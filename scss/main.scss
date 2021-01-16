@@ -59,10 +59,13 @@
 @import 'components/card';
 @import 'components/headline';
 @import 'components/text';
+@import 'components/theme-switcher';
 
 /// 6. pages
 /// If you have page-specific styles, it is better to put them here.
 
 /// 7. themes
 /// On large sites and applications, it is not unusual to have different themes. You can put them here.
+@import 'themes/themes';
 @import 'themes/default';
+@import 'themes/dark';

@@ -49,6 +49,50 @@ $themes: (
 			md: 0 9px 16px rgba(0,0,0,0.15),
 			lg: 0 12px 24px rgba(0,0,0,0.25)
 		)
+	),
+	lava: (
+		colors: (
+			primary: #4F0B0B,
+			secondary: #DA2F3B,
+			accent: #FFCFCF,
+			light: #F7F6F0,
+			dark: #343434,
+			font-base: #343434,
+			font-headline: #4F0B0B
+		)
+	),
+	ocean: (
+		colors: (
+			primary: #0C1135,
+			secondary: #3054D9,
+			accent: #7A9DFF,
+			light: #D5E6FF,
+			dark: #343434,
+			font-base: #343434,
+			font-headline: #3054D9
+		)
+	),
+	forest: (
+		colors: (
+			primary: #0C3626,
+			secondary: #8BC441,
+			accent: #D6FFB4,
+			light: #E9FFE8,
+			dark: #343434,
+			font-base: #343434,
+			font-headline: #0C3626
+		)
+	),
+	dark: (
+		colors: (
+			primary: #131428,
+			secondary: #2A2B40,
+			accent: #ED934E,
+			light: #FFDFC7,
+			dark: #131428,
+			font-base: #ECECEC,
+			font-headline: #ECECEC
+		)
 	)
 	/* 7 */
 );

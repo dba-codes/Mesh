@@ -1,0 +1,41 @@
+ul.theme-switcher {
+	position: fixed;
+	bottom: $spacing--small;
+	right: $spacing--small;
+	background: #fff;
+	@include shadow(box, $shadow--medium);
+	@include radius($radius--small);
+	overflow: hidden;
+	
+	li.toggle--theme {
+		@extend %block-flex;
+		justify-content: flex-start;
+		align-items: center;
+		list-style: none;
+		cursor: pointer;
+		padding: $spacing--medium;
+		opacity: 0.5;
+		
+		&:hover {
+			background: $color--light;
+			opacity: 1;
+		}
+		
+		&.active {
+			opacity: 1;
+		}
+		
+		.theme--color {
+			width: 24px;
+			height: 24px;
+			display: inline-block;
+			@include radius(50%);
+		}
+		
+		.label {
+			display: inline-block;
+			font-size: 1rem;
+			padding-left: $spacing--small;
+		}
+	}
+}

@@ -11,18 +11,10 @@
 			margin-right: 0;
 		}
 		
-		&.current {
-			a {
-				color: $color--primary;
-			}
-		}
-		
 		a {
 			font-size: 1rem;
 			padding: 0.25rem;
-			&:hover {
-				color: $color--secondary;
-			}
+			color: #fff;
 		}
 	}
 }

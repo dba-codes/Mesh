@@ -3,7 +3,7 @@
 /// @author dba.codes – Daniel Baumert
 /// @param {Object} $themes - Object that contains all defined themes
 
-$theme: default;
+$theme: dark;
 
 /// here you can add specific theme attributes!
 /// If you have multiple themes, it makes sense to package these in different files. The themes directory is suitable for this.
@@ -11,23 +11,20 @@ $theme: default;
 /// If you use the loop theme configuration, you can also use these files so specify some attributes in this theme.
 
 body.theme--#{$theme} {
-	header {
+	.section {
 		background: theme-property($theme, colors, primary);
-	}
-	
-	.navigation {
-		li {
-			&.current {
-				a {
-					color: theme-property($theme, colors, secondary);
-				}
-			}
-			
-			a {
-				&:hover {
-					color: theme-property($theme, colors, secondary);
+		
+		.section__headline {
+			h2 {
+				.label {
+					background: theme-property($theme, colors, accent);
+					color: theme-property($theme, colors, primary);
 				}
 			}
 		}
+	}
+	
+	.card {
+		background: theme-property($theme, colors, secondary);
 	}
 }

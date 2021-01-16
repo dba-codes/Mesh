@@ -1,0 +1,74 @@
+/// loop theme configuration
+/// @access private
+/// @author dba.codes – Daniel Baumert
+/// @param {Object} $themes - Object that contains all defined themes
+
+/// This is an alternative, recommended way to render themes.
+/// This will prevent you from writing everything twice in different files.
+
+@each $theme, $map in $themes {
+	body.theme--#{$theme} {
+		header {
+			@include gradient(linear, -45deg, theme-property($theme, colors, secondary), theme-property($theme, colors, primary));
+		}
+		.logo {
+			color: theme-property($theme, colors, accent);
+			
+			.slogan {
+				color: theme-property($theme, colors, light);
+			}
+		}
+		
+		.navigation {
+			li {
+				&.current {
+					a {
+						color: theme-property($theme, colors, accent);
+					}
+				}
+				
+				a {
+					&:hover {
+						color: theme-property($theme, colors, light);
+					}
+				}
+			}
+		}
+		
+		.section {
+			@include gradient(linear, -45deg, theme-property($theme, colors, light), theme-property($theme, colors, accent));
+			
+			.section__headline {
+				h2 {
+					.label {
+						background: theme-property($theme, colors, primary);
+					}
+				}
+			}
+		}
+		
+		.card {
+			.card__headline {
+				&:after {
+					background: theme-property($theme, colors, secondary);
+				}
+			}
+		}
+		
+		.headline {
+			color: theme-property($theme, colors, font-headline);
+		}
+		
+		.text {
+			color: theme-property($theme, colors, font-base);
+		}
+	}
+	
+	ul.theme-switcher {
+		li[data-theme='theme--#{$theme}'] {
+			.theme--color {
+				@include gradient(linear, -45deg, theme-property($theme, colors, primary), theme-property($theme, colors, secondary));
+			}
+		}
+	}
+}

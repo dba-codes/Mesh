@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>MESH</title>
     <link rel="stylesheet" href="css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     <script src="js/index.js"></script>
 </head>
 <body>
@@ -170,5 +172,27 @@
             </div>
         </section>
     </main>
+    <ul class="theme-switcher">
+        <li class="toggle--theme" data-theme="theme--default">
+            <span class="theme--color"></span>
+            <span class="label">Default</span>
+        </li>
+        <li class="toggle--theme" data-theme="theme--dark">
+            <span class="theme--color"></span>
+            <span class="label">Dark</span>
+        </li>
+        <li class="toggle--theme" data-theme="theme--lava">
+            <span class="theme--color"></span>
+            <span class="label">Lava</span>
+        </li>
+        <li class="toggle--theme" data-theme="theme--ocean">
+            <span class="theme--color"></span>
+            <span class="label">Ocean</span>
+        </li>
+        <li class="toggle--theme" data-theme="theme--forest">
+            <span class="theme--color"></span>
+            <span class="label">Forest</span>
+        </li>
+    </ul>
 </body>
 </html>

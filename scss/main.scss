@@ -30,6 +30,9 @@
 /// 1.3. placeholders
 @import 'abstracts/placeholders/block';
 @import 'abstracts/placeholders/block-flex';
+@import 'abstracts/placeholders/block-grid';
+@import 'abstracts/placeholders/inline-flex';
+@import 'abstracts/placeholders/inline-grid';
 /// 1.4. variables
 @import 'abstracts/variables/grid-config';
 @import 'abstracts/variables/theme-config';

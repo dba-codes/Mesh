@@ -1,0 +1,10 @@
+/// theme property
+/// @author dba.codes – Daniel Baumert
+/// @access public
+/// @param {String} $theme - theme name which is defined in the theme configuration
+/// @param {String} $property - property name which is defined in the theme configuration
+
+@function theme-property($theme, $group, $property) {
+	$value: map-deep-get($themes, $theme, $group, $property);
+	@return $value;
+}

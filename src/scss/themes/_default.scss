@@ -1,0 +1,11 @@
+/// "default" theme configuration
+/// @access private
+/// @author dba.codes – Daniel Baumert
+/// @param {Object} $themes - Object that contains all defined themes
+
+$theme: default;
+
+/// here you can add specific theme attributes!
+/// If you have multiple themes, it makes sense to package these in different files. The themes directory is suitable for this.
+/// If you have only one theme, you can write all theme-specific properties directly into your elements.
+/// If you use the loop theme configuration, you can also use these files so specify some attributes in this theme.

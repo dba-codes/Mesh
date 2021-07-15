@@ -1,0 +1,6 @@
+@mixin gradient($option, $deg, $color1, $color2) {
+	background: #{$option}-gradient($deg, $color1, $color2);
+	background: -webkit-#{$option}-gradient($deg, $color1, $color2);
+	background: -moz-#{$option}-gradient($deg, $color1, $color2);
+	background: -o-#{$option}-gradient($deg, $color1, $color2);
+}

@@ -1,0 +1,40 @@
+/// Theme helper – defines variables for a specific theme
+/// @access private
+/// @author dba.codes – Daniel Baumert
+/// @param {Object} $themes - Object that contains all defined themes
+
+/**
+ * 1. Theme name
+ * 2. Color variables
+ * 3. Typography variables
+ * 4. Radius variables
+ * 5. Spacing variables
+ * 6. Shadow variables
+ */
+
+/* 1 */
+$theme: default;
+/* 2 */
+$color--primary: theme-property($theme, colors, primary);
+$color--secondary: theme-property($theme, colors, secondary);
+$color--accent: theme-property($theme, colors, accent);
+$color--light: theme-property($theme, colors, light);
+$color--dark: theme-property($theme, colors, dark);
+$color--font-base: theme-property($theme, colors, font-base);
+$color--font-headline: theme-property($theme, colors, font-headline);
+/* 3 */
+$font--base-size: theme-property($theme, typography, base-size);
+$font--base-family: theme-property($theme, typography, base-family);
+$font--headline-family: theme-property($theme, typography, headline-family);
+/* 4 */
+$radius--small: theme-property($theme, radius, sm);
+$radius--medium: theme-property($theme, radius, md);
+$radius--large: theme-property($theme, radius, lg);
+/* 5 */
+$spacing--small: theme-property($theme, spacing, sm);
+$spacing--medium: theme-property($theme, spacing, md);
+$spacing--large: theme-property($theme, spacing, lg);
+/* 6 */
+$shadow--small: theme-property($theme, shadow, sm);
+$shadow--medium: theme-property($theme, shadow, md);
+$shadow--large: theme-property($theme, shadow, lg);

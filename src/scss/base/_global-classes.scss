@@ -1,0 +1,123 @@
+// radius classes
+$radiusgroup: map-deep-get($themes, default, radius);
+
+@each $radius, $map in $radiusgroup {
+	.radius--#{$radius} {
+		@include radius($map);
+	}
+}
+
+// shadow classes
+$shadowgroup: map-deep-get($themes, default, shadow);
+
+@each $shadow, $map in $shadowgroup {
+	.shadow-text--#{$shadow} {
+		@include shadow(text, $map);
+	}
+	.shadow-box--#{$shadow} {
+		@include shadow(box, $map);
+	}
+}
+
+// margin and padding classes
+$spacinggroup: map-deep-get($themes, default, spacing);
+
+@each $spacing, $map in $spacinggroup {
+	// inner space
+	.spacing--#{$spacing} {
+		padding: $map !important;
+	}
+	.spacing--#{$spacing}--top-bottom {
+		padding-top: $map !important;
+		padding-bottom: $map !important;
+	}
+	.spacing--#{$spacing}--left-right {
+		padding-left: $map !important;
+		padding-right: $map !important;
+	}
+	.spacing--#{$spacing}--top {
+		padding-top: $map !important;
+	}
+	.spacing--#{$spacing}--bottom {
+		padding-bottom: $map !important;
+	}
+	.spacing--#{$spacing}--left {
+		padding-left: $map !important;
+	}
+	.spacing--#{$spacing}--right {
+		padding-right: $map !important;
+	}
+	// outer space
+	.gap--#{$spacing} {
+		margin: $map !important;
+	}
+	.gap--#{$spacing}--top-bottom {
+		margin-top: $map !important;
+		margin-bottom: $map !important;
+	}
+	.gap--#{$spacing}--left-right {
+		margin-left: $map !important;
+		margin-right: $map !important;
+	}
+	.gap--#{$spacing}--top {
+		margin-top: $map !important;
+	}
+	.gap--#{$spacing}--bottom {
+		margin-bottom: $map !important;
+	}
+	.gap--#{$spacing}--left {
+		margin-left: $map !important;
+	}
+	.gap--#{$spacing}--right {
+		margin-right: $map !important;
+	}
+}
+
+// disable inner space
+.spacing--disable {
+	padding: 0 !important;
+}
+.spacing--disable--top-bottom {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+.spacing--disable--left-right {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.spacing--disable--top {
+	padding-top: 0 !important;
+}
+.spacing--disable--bottom {
+	padding-bottom: 0 !important;
+}
+.spacing--disable--left {
+	padding-left: 0 !important;
+}
+.spacing--disable--right {
+	padding-right: 0 !important;
+}
+// outer space
+.gap--disable {
+	margin: 0 !important;
+}
+.gap--disable--top-bottom {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+.gap--disable--left-right {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+.gap--disable--top {
+	margin-top: 0 !important;
+}
+.gap--disable--bottom {
+	margin-bottom: 0 !important;
+}
+.gap--disable--left {
+	margin-left: 0 !important;
+}
+.gap--disable--right {
+	margin-right: 0 !important;
+}

@@ -1,0 +1,10 @@
+/// loop theme configuration
+/// @access private
+/// @author dba.codes – Daniel Baumert
+/// @param {Object} $themes - Object that contains all defined themes
+
+/// This is an alternative, recommended way to render themes.
+/// This will prevent you from writing everything twice in different files.
+
+@each $theme,
+$map in $themes {}

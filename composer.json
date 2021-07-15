@@ -1,0 +1,6 @@
+{
+    "name": "Mesh",
+    "description": "Mesh is a powerful boilerplate with a grid, basic components and layouts, based on SCSS. The architecture is based on the recommended 7-1 pattern of SCSS.",
+    "require": {
+    }
+}
